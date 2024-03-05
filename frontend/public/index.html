@@ -1,0 +1,65 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">  
+  <script defer src="main.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div class="left"></div>
+<div class="stuff">    
+  <br><br>
+  <h1>Resume</h1>
+  <h2>Emily</h2>
+  <p class="counter"> The number of visitors to this website is </p>
+  <p id ="body"></p>
+      <script type = "text/javascript">
+        var apiUrl = "https://nsxal3m498.execute-api.us-east-1.amazonaws.com/Prod/counters";
+            fetch(apiUrl)
+               .then(response => response.json())
+               .then(data =>{
+                    var count = document.getElementById('body');
+                count.innerHTML = data.body;
+                console.log(data)});
+         </script>
+  <hr />
+  <br>
+  <p class="head">Interests</p>
+  <ul>
+    <li>Drawing</li>
+    <li>Photography</li>
+    <li>Design</li>
+    <li>Programming</li>
+    <li>Computer Science</li>
+  </ul>
+  <p class="head">Skills</p>
+  <ul>
+    <li>Web Design with HTML & CSS</li>
+  </ul>
+  <p class="head">Education</p>
+  <ul>
+    <a href="http://www.wiltonhighschool.org/pages/Wilton_High_School">
+      <li>Wilton High School</li>
+    </a>
+    <!--Link-->
+    <a href="https://www.silvermineart.org/">
+      <li>Silvermine School of Arts</li>
+    </a>
+    <li>Codeacademy</li>
+  </ul>
+  <p class="head">Experience</p>
+  <ul>
+    <li>Student Technology Intern for Wilton School District</li>
+    <li>Babysitter</li>
+  </ul>
+  <p class="head">Extracurriculars</p>
+  <ul>
+    <li>Recycling Club</li>
+    <li>Gardening Club</li>
+    <li>Book Club</li>
+  </ul>
+</div>
+<div class="right"></div>
+</body>
+<div id="footer">
+  <h2 id="name">Emily</h2></div>  
+</html>  
