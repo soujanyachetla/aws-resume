@@ -2,7 +2,7 @@ name: Run build, tests, and deployment on push
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
